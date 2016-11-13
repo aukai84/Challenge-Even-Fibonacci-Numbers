@@ -13,15 +13,15 @@ function _sumFibs( maxFibValue ) {
 
   while (first + second <= maxFibValue) {
     var nextNum = first + second;
-   fibArray.push(nextNum);
-   first = second;
-   second = nextNum;
+    fibArray.push(nextNum);
+    first = second;
+    second = nextNum;
   }
- for (var i = 0; i <= fibArray.length; i++) {
-   if (fibArray[i] % 2 === 0) {
+ for (var i = 0; i < fibArray.length; i++) {
+    if (fibArray[i] % 2 === 0) {
 
      sum += fibArray[i];
-   }
+    }
  }
 
 
