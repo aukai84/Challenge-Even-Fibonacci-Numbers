@@ -39,12 +39,27 @@ function _highestFibonacciNumber (maxFibValue){
   var highest = 0;
 
   //define your base case, validate your input
+  var sum = 0;
+  var first = 0;
+  var second = 1;
+  var fibArray = [];
 
+  while (first + second <= maxFibValue) {
+    var nextNum = first + second;
+    fibArray.push(nextNum);
+    first = second;
+    second = nextNum;
+  }
+  if (maxFibValue === fibArray[fibArray.length -1]) {
+    return fibArray[fibArray.length -2];
+  } else {
+    highest = fibArray[fibArray.length -1];
+  }
 
   //do your work here
 
   return highest;
-};
+}
 
 /**
  * Do not modify code below.
